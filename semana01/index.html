@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Titulo 2</h2>
+    <p id="p1">Párrafo editado</p>
+    <p id="p3">Párrafo Tres</p>
+    <h2>Frutas</h2>
+    <ul id="lista">
+    </ul>
+    <p>https://ordainit.com/educate/index.html</p>
+    <script>
+
+        loading();
+
+        function loading() {
+
+            const frutas = [
+                'pera',
+                'manzana',
+                'uva'
+            ];
+
+            //DOM
+            let p1 = document.getElementById('p1');
+            p1.innerText = `Hola mundo`;
+            p1.style.color = 'red';
+            let lista = document.getElementById('lista');
+            frutas.forEach(f => {
+                const obj = document.createElement('li');
+                obj.innerText = f;
+                lista.appendChild(obj);
+            });
+        }
+    </script>
+</body>
+
+</html>
