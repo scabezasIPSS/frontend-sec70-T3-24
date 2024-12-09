@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConIngenio.cl | Soluciones Tecnológicas con Ingeniería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .hero {
+            background-image: url('assets/img/hero.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 50%;
+        }
+
+        .soloLogo {
+            width: 240px;
+            /* clip-path: inset(0px 137px 0px 0px); */
+        }
+
+        .nav-pills {
+            --bs-nav-pills-link-active-bg: #56b247;
+        }
+
+        .nav {
+
+            --bs-nav-link-color: #56b247;
+            --bs-nav-link-hover-color: #ee9358;
+        }
+
+        .btn-primary {
+            --bs-btn-bg: #56b247;
+            --bs-btn-border-color: #56b247;
+            --bs-btn-hover-bg: #ee9358;
+            --bs-btn-hover-border-color: #ee9358;
+            --bs-btn-focus-shadow-rgb: 49, 132, 253;
+            --bs-btn-active-bg: black;
+            --bs-btn-active-border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="assets/img/logo-light.png" style="width: 200px;">
+            </a>
+            <ul id="lista-menu-principal" class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Menu 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Menu 2</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Menu 3</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Menu 4</a></li>
+            </ul>
+        </header>
+        <div class="px-4 py-5 my-5 text-center hero">
+            <h1 id="heroTitulo" class="display-7 fw-bold text-body-emphasis">{titulo: heroTitulo}</h1>
+            <div class="col-lg-6 mx-auto">
+                <p id="heroParrafo" class="lead mb-4">{parrafo: heroParrafo}</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button id="heroBoton" type="button" class="btn btn-primary btn-lg px-4 gap-3">{boton:
+                        heroBoton}</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="px-4  text-center">
+            <h1 id="serviciosTitulo" class="display-5 my-5 fw-bold text-body-emphasis">{serviciosTitulo}</h1>
+            <div id="serviciosFilaTarjetas" class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">asdasd</h5>
+                            <p class="card-text">Valor $.</p>
+                            <a href="#" class="btn btn-primary">SIGLA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="px-4  text-center">
+            <h1 id="indicadoresTitulo" class="display-5 my-5 fw-bold text-body-emphasis">{indicadoresTitulo}</h1>
+            <pre id="output" style="text-align: left;"></pre>
+            <div id="indicadoresFilaTarjetas" class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="indicadoresNew" style="background-color: aliceblue;" class="p-4">
+
+                <p class="mb-3" style="text-align: left;">En esta sección podrá ingresar un nuevo indicador. Llene
+                    todos los campos solicitados:</p>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="fi1" placeholder="">
+                    <label for="fi1">Código</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="fi2" placeholder="">
+                    <label for="fi2">Nombre</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="fs1" aria-label="Floating label select example">
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">CLP</option>
+                    </select>
+                    <label for="fs1">Seleccione una Unidad de Medida</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="fi3" placeholder="">
+                    <label for="fi3">Valor</label>
+                </div>
+                <button type="button" onclick="validarFormularioIndicador(this)" class="btn btn-primary w-100">Crear
+                    Indicador</button>
+            </div>
+        </div>
+        <hr>
+        <div class="px-4 ">
+            <h1 class="display-5 my-5 fw-bold text-body-emphasis text-center">Contacto</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body" id="infoContacto">
+
+                            <h5 class="card-title">Title</h5>
+                            <p class="card-text">contenido</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Formulario de Contacto</h5>
+                            <div class="card-text mb-2">
+                                <form action="" method="post">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder="">
+                                        <label for="floatingInput1">Nombre y Apellido</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" id="floatingSelect1"
+                                            aria-label="Floating label select example">
+                                            <option selected>Seleccione una opcion</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <label for="floatingSelect">Seleccione uno de nuestros servicios</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" placeholder="Leave a comment here"
+                                            id="floatingTextarea2" style="height: 100px"></textarea>
+                                        <label for="floatingTextarea2">Mensaje</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Simular Correcto / incorrecto
+                                        </label>
+                                    </div>
+                                    <button type="button" onclick="validarFormularioContacto()"
+                                        class="btn btn-primary w-100">Enviar Mensaje</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="px-4  text-center">
+            <h1 id="quienesTitulo" class="display-5 my-5 fw-bold text-body-emphasis">{quienesTitulo}</h1>
+            <h2 id="quienesSubTitulo" class="display-8 my-5 fw-bold text-body-emphasis">{quienesSubTitulo}</h1>
+                <p id="quienesParrafo" class="my-5 text-body-emphasis">{quienesParrafo}</p>
+                <div id="quienesFilaTarjetas" class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">titulo1</h5>
+                                <p class="card-text">parrafo1.
+                                </p>
+                                <a href="#" class="btn btn-primary">boton1</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">titulo2</h5>
+                                <p class="card-text">parrafo2</p>
+                                <a href="#" class="btn btn-primary">boton2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div id="footerCol1" class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <img class="soloLogo" src="assets/img/logo-light.png">
+                </a>
+                <p>parrafo que acompaña el logo</p>
+                <p class="text-body-secondary">© 2024</p>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Nuestras Secciones</h5>
+                <ul id="footerListaSecciones" class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Ubicación</h5>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/IDDJYHU2MBDELHNCXGZ4AC42GY.jpg"
+                    width="100%">
+            </div>
+
+            <div class="col mb-3">
+                <h5>Contacto</h5>
+                <ul id="footerListaContacto" class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Redes Sociales</h5>
+                <ul id="footerListaRRSS" class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        //Evaluacion 2
+        const valoresHero = {
+            'titulo': 'Su socio para soluciones digitales',
+            'parrafo': 'Proporcionamos el diseño de TI más responsivo y funcional para empresas y negocios de todo el mundo.',
+            'boton': {
+                'link': '#contacto',
+                'texto': 'Contáctanos'
+            }
+        };
+
+        const listaServicios = [
+            {
+                "id": 1,
+                "titulo": {
+                    "esp": "Consultoría digital",
+                    "eng": "Digital consulting"
+                },
+                "descripcion": {
+                    "esp": "Identificamos las fallas y conectamos los puntos entre tu negocio y tu estrategia digital. Nuestro equipo experto cuenta con años de experiencia en la definición de estrategias y hojas de ruta en función de tus objetivos específicos.",
+                    "eng": "We identify failures and connect the dots between your business and your digital strategy. Our expert team has years of experience defining strategies and roadmaps based on your specific objectives."
+                },
+                "activo": true
+            },
+            {
+                "id": 2,
+                "titulo": {
+                    "esp": "Soluciones multiexperiencia",
+                    "eng": "Multi-experience solutions"
+                },
+                "descripcion": {
+                    "esp": "Deleitamos a las personas usuarias con experiencias interconectadas a través de aplicaciones web, móviles, interfaces conversacionales, digital twin, IoT y AR. Su arquitectura puede adaptarse y evolucionar para adaptarse a los cambios de tu organización.",
+                    "eng": "We delight users with interconnected experiences through web applications, mobile applications, conversational interfaces, digital twin, IoT and AR. Its architecture can adapt and evolve to adapt to changes in your organization."
+                },
+                "activo": true
+            },
+            {
+                "id": 3,
+                "titulo": {
+                    "esp": "Evolución de ecosistemas",
+                    "eng": "Ecosystem evolution"
+                },
+                "descripcion": {
+                    "esp": "Ayudamos a las empresas a evolucionar y ejecutar sus aplicaciones de forma eficiente, desplegando equipos especializados en la modernización y el mantenimiento de ecosistemas técnicos. Creando soluciones robustas en tecnologías de vanguardia.",
+                    "eng": "We help companies evolve and run their applications efficiently, deploying teams specialized in the modernization and maintenance of technical ecosystems. Creating robust solutions in cutting-edge technologies."
+                },
+                "activo": true
+            },
+            {
+                "id": 4,
+                "titulo": {
+                    "esp": "Soluciones Low-Code",
+                    "eng": "Low-Code Solutions"
+                },
+                "descripcion": {
+                    "esp": "Traemos el poder de las soluciones low-code y no-code para ayudar a nuestros clientes a acelerar su salida al mercado y añadir valor. Aumentamos la productividad y la calidad, reduciendo los requisitos de cualificación de los desarrolladores.",
+                    "eng": "We bring the power of low-code and no-code solutions to help our clients accelerate time to market and add value. We increase productivity and quality, reducing developer qualification requirements."
+                },
+                "activo": true
+            }
+        ];
+
+        const listaNosotros = [
+            {
+                "titulo": {
+                    "esp": "Servicios de soporte, gestión y diseño de TI altamente personalizados.",
+                    "eng": "Highly Tailored IT Design, Management & Support Services."
+                },
+                "descripcion": {
+                    "esp": "Acelere la innovación con equipos tecnológicos de clase mundial. Lo conectaremos con un equipo remoto completo de increíbles talentos independientes para todas sus necesidades de desarrollo de software.",
+                    "eng": "Accelerate innovation with world-class tech teams We’ll match you to an entire remote team of incredible freelance talent for all your software development needs."
+                }
+            },
+            {
+                "titulo": {
+                    "esp": "Misión",
+                    "eng": "Mission"
+                },
+                "descripcion": {
+                    "esp": "Nuestra misión es ofrecer soluciones digitales innovadoras y de alta calidad que impulsen el éxito de nuestros clientes, ayudándolos a alcanzar sus objetivos empresariales a través de la tecnología y la creatividad.",
+                    "eng": "Our mission is to deliver high-quality, innovative digital solutions that drive our clients' success, helping them achieve their business goals through technology and creativity."
+                }
+            },
+            {
+                "titulo": {
+                    "esp": "Visión",
+                    "eng": "Vision"
+                },
+                "descripcion": {
+                    "esp": "Nos visualizamos como líderes en el campo de la consultoría y desarrollo de software, reconocidos por nuestra excelencia en el servicio al cliente, nuestra capacidad para adaptarnos a las necesidades cambiantes del mercado y nuestra contribución al crecimiento y la transformación digital de las empresas.",
+                    "eng": "We see ourselves as leaders in the field of software consulting and development, recognized for our excellence in customer service, our ability to adapt to changing market needs and our contribution to the growth and digital transformation of companies."
+                }
+            }
+        ];
+
+        //estas constantes, seran futuros endpoints
+
+        const listaMenu = [
+            {
+                link: '#inicio',
+                texto: 'Inicio'
+            },
+            {
+                link: '#servicios',
+                texto: 'Servicios'
+            },
+            {
+                link: '#contacto',
+                texto: 'Contáctenos'
+            },
+            {
+                link: '#aboutUs',
+                texto: 'Nosotros'
+            },
+        ];
+
+        const listaIndicadores = [
+            {
+                "id": "1",
+                "codigo": "UF",
+                "nombre": "Unidad de Fomento",
+                "unidad_medida_id": "1",
+                "valor": "37968.98",
+                "activo": true
+            },
+            {
+                "id": "2",
+                "codigo": "IVP",
+                "nombre": "Indice de Valor Promedio",
+                "unidad_medida_id": "1",
+                "valor": "39443.16",
+                "activo": true
+            },
+            {
+                "id": "3",
+                "codigo": "dolar",
+                "nombre": "Dolar Observado",
+                "unidad_medida_id": "1",
+                "valor": "945.87",
+                "activo": true
+            },
+            {
+                "id": "4",
+                "codigo": "IPSS",
+                "nombre": "Unidad de IPSS",
+                "unidad_medida_id": "1",
+                "valor": "1234.00",
+                "activo": false
+            },
+            {
+                "id": "5",
+                "codigo": "CIISA",
+                "nombre": "Unidad de CIISA",
+                "unidad_medida_id": "1",
+                "valor": "4321.00",
+                "activo": false
+            }
+        ];
+
+        const listaContacto = [
+            {
+                "tipo": "Dirección",
+                "valor": "Av. Providencia 1234, Oficina 601 Providencia, Santiago Chile",
+                "activo": true
+            },
+            {
+                "tipo": "Teléfono",
+                "valor": "+56 2 1234 5678",
+                "activo": true
+            },
+            {
+                "tipo": "Email",
+                "valor": "info@coningenio.cl",
+                "activo": true
+            }
+        ];
+
+        const listaRRSS = [
+            {
+                "rrss": "facebook",
+                "icono": "fa fa-facebook",
+                "link": "#",
+                "activo": true
+            },
+            {
+                "rrss": "instagram",
+                "icono": "fa fa-instagram",
+                "link": "#",
+                "activo": true
+            }
+        ];
+
+
+
+        //DOM: Document Object Model
+        seteoWeb();
+
+        getConAPI('http://localhost/backend-sec70-T3-24/semana08-Retroalimentacion/api/v1/test/', 'ipss', 'indicadores');
+
+        function seteoWeb() {
+            //set menu principal
+            const menuPrincipal = document.getElementById('lista-menu-principal');
+            menuPrincipal.innerHTML = '';
+            let contadorMPitems = 0;
+            listaMenu.forEach(e => {
+                const item = document.createElement('li');
+                item.classList.add('nav-item');
+                if (contadorMPitems == 0) {
+                    item.innerHTML = `<a href="${e.link}" class="nav-link active" aria-current="page">${e.texto}</a>`;
+                } else {
+                    item.innerHTML = `<a href="${e.link}" class="nav-link">${e.texto}</a>`;
+                }
+                menuPrincipal.appendChild(item);
+                contadorMPitems++;
+            });
+            //set HERO
+            const heroTitulo = document.getElementById('heroTitulo');
+            heroTitulo.innerText = valoresHero.titulo;
+            const heroParrafo = document.getElementById('heroParrafo');
+            heroParrafo.innerText = valoresHero.parrafo;
+            const heroBoton = document.getElementById('heroBoton');
+            heroBoton.setAttribute('href', valoresHero.boton.link);
+            heroBoton.innerText = valoresHero.boton.texto;
+            //ser Servicios
+            const serviciosTitulo = document.getElementById('serviciosTitulo');
+            serviciosTitulo.innerText = 'Servicios';
+            //set lista en Tarjetas
+            const serviciosFilaTarjetas = document.getElementById('serviciosFilaTarjetas');
+            serviciosFilaTarjetas.innerHTML = '';
+            listaServicios.forEach(s => {
+                if (s.activo == true) {
+                    serviciosFilaTarjetas.innerHTML += `
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card">
+                                <h5 class="card-header">${s.titulo.esp}</h5>
+                                <div class="card-body">
+                                    <p class="card-text">${s.descripcion.esp}</p>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                }
+            });
+
+            //set info contacto
+            const infoContacto = document.getElementById('infoContacto');
+            infoContacto.innerHTML = '';
+            listaContacto.forEach(c => {
+                const encabezado = document.createElement('h5');
+                encabezado.classList.add('card-title');
+                encabezado.innerText = c.tipo;
+                infoContacto.appendChild(encabezado);
+                const contenido = document.createElement('p');
+                contenido.classList.add('card-text');
+                contenido.innerText = c.valor;
+                infoContacto.appendChild(contenido);
+            });
+
+            //set nosotros
+            const quienesTitulo = document.getElementById('quienesTitulo');
+            quienesTitulo.innerText = 'Nosotros';
+            const quienesSubTitulo = document.getElementById('quienesSubTitulo');
+            quienesSubTitulo.innerText = listaNosotros[0].titulo.esp;
+            const quienesParrafo = document.getElementById('quienesParrafo');
+            quienesParrafo.innerText = listaNosotros[0].descripcion.esp;
+            const quienesFilaTarjetas = document.getElementById('quienesFilaTarjetas');
+            quienesFilaTarjetas.innerHTML = '';
+
+            let indiceNosotros = 0;
+            listaNosotros.forEach(n => {
+                if (indiceNosotros != 0) {
+                    quienesFilaTarjetas.innerHTML += `
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card">
+                                <h5 class="card-header">${n.titulo.esp}</h5>
+                                <div class="card-body">
+                                    <p class="card-text">${n.descripcion.esp}</p>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                }
+                indiceNosotros++;
+            });
+
+            //set footer columna 1
+            const footerCol1 = document.getElementById('footerCol1');
+            footerCol1.innerHTML = '';
+            footerCol1.innerHTML = `
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <img class="soloLogo" src="assets/img/logo-light.png">
+                </a>
+                <p>${valoresHero.parrafo}</p>
+                <p class="text-body-secondary">© 2024</p>
+            `;
+
+            //set nuestras secciones en footer: footerListaSecciones (UL)
+            const footerListaSecciones = document.getElementById('footerListaSecciones');//UL
+            footerListaSecciones.innerHTML = '';
+            listaMenu.forEach(m => {
+                //<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                const li = document.createElement('li');
+                li.classList.add('nav-item');
+                li.classList.add('mb-2');
+                li.innerHTML = `<a href="${m.link}" class="nav-link p-0 text-body-secondary">${m.texto}</a>`;
+                footerListaSecciones.appendChild(li);
+            });
+            //set redes sociales en footer: footerListaRRSS (UL)
+            const footerListaRRSS = document.getElementById('footerListaRRSS');
+            footerListaRRSS.innerHTML = '';
+            listaRRSS.forEach(rrss => {
+                if (rrss.activo == true) {
+                    //<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    const li = document.createElement('li');
+                    li.classList.add('nav-item');
+                    li.classList.add('mb-2');
+                    li.innerHTML = `<a href="${rrss.link}" target="_blank" class="nav-link p-0 text-body-secondary"><i class="${rrss.icono}"></i> ${rrss.rrss}</a>`;
+                    footerListaRRSS.appendChild(li);
+                }
+            })
+            //set contacto en footer: footerListaContacto (UL)
+            const footerListaContacto = document.getElementById('footerListaContacto');
+            footerListaContacto.innerHTML = '';
+            listaContacto.forEach(c => {
+                const li = document.createElement('li');
+                li.classList.add('nav-item');
+                li.classList.add('mb-2');
+                li.innerHTML = `<a href="#" class="nav-link p-0 text-body-secondary">${c.valor}</a>`;
+                footerListaContacto.appendChild(li);
+            });
+
+            //set formulario de contacto
+            const floatingSelect1 = document.getElementById('floatingSelect1');
+            floatingSelect1.innerHTML = '<option selected>Seleccione una opcion</option>';
+            listaServicios.forEach(s => {
+                if (s.activo == true) {
+                    floatingSelect1.innerHTML += `<option value="${s.id}">${s.titulo.esp}</option>`;
+                }
+            });
+        }
+
+
+        function getConAPI(_endpoint, _token, _section) {
+            const tituloSection = document.getElementById('indicadoresTitulo');
+            switch (_section) {
+                case 'indicadores':
+                    indicadoresTitulo.innerText = 'Indicadores';
+                    $.ajax({
+                        url: _endpoint,
+                        type: "GET", // Cambia a POST, PUT o DELETE si es necesario
+                        headers: {
+                            "Authorization": `Bearer ${_token}`
+                        },
+                        success: function (data) {
+                            // Mostrar datos en el elemento <pre>
+                            // $("#output").text(JSON.stringify(data, null, 2));
+                            const indicadoresFilaTarjetas = document.getElementById('indicadoresFilaTarjetas');
+                            let cantidadColumnas = 12;
+                            if (data.data.length <= 6) {
+                                cantidadColumnas = 12 / data.data.length;
+                            }
+                            // console.log(data);
+                            indicadoresFilaTarjetas.innerHTML = '';
+                            data.data.forEach(d => {
+                                if (d.activo) {
+
+                                    indicadoresFilaTarjetas.innerHTML += `
+                                    <div class="col-lg-${cantidadColumnas} col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${d.nombre}</h5>
+                                                <p class="card-text">${d.codigo} $${d.valor}</p>
+                                                <a href="#" class="btn btn-primary">Copiar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    `;
+                                }
+                            });
+                        },
+                        error: function (xhr, status, error) {
+                            // Manejo de errores
+                            $("#output").text(`Error: ${xhr.status} ${xhr.statusText}`);
+                        }
+                    });
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function validarFormularioContacto() {
+            const floatingInput1 = document.getElementById('floatingInput1');
+            if ((floatingInput1.value).length == 0) {
+                // alert('Error!!!!! le falta el nombre');
+                floatingInput1.classList.add('is-invalid');
+            } else {
+                floatingInput1.classList.remove('is-invalid');
+            }
+            // alert('validando datos: ');
+        }
+
+        function validarFormularioIndicador(_btn) {
+            let errores = 0;
+
+            const codigo = document.getElementById('fi1');
+            const nombre = document.getElementById('fi2');
+            const unidadMedida = document.getElementById('fs1');
+            const valor = document.getElementById('fi3');
+
+            if (codigo.value.length == 0) {
+                codigo.classList.add('is-invalid');
+                errores++;
+            } else {
+                codigo.classList.remove('is-invalid');
+                codigo.classList.add('is-valid');
+                // console.log(codigo.value);
+            }
+
+            if (nombre.value.length == 0) {
+                nombre.classList.add('is-invalid');
+                errores++;
+            } else {
+                // console.log(nombre.value);
+                nombre.classList.remove('is-invalid');
+                nombre.classList.add('is-valid');
+            }
+
+            if (valor.value.length == 0) {
+                errores++;
+                valor.classList.add('is-invalid');
+            } else {
+                valor.classList.remove('is-invalid');
+                valor.classList.add('is-valid');
+            }
+
+            if (unidadMedida.value == 'Seleccione una opcion') {
+                errores++;
+                unidadMedida.classList.add('is-invalid');
+            } else {
+                unidadMedida.classList.remove('is-invalid');
+                unidadMedida.classList.add('is-valid');
+                // console.log(unidadMedida.value);
+            }
+
+            if (errores == 0) {
+                _btn.classList.add('disabled');
+                _btn.innerText = '... ingresando datos';
+
+                // Datos para el POST
+                const postData = {
+                    codigo: codigo.value,
+                    nombre: nombre.value,
+                    unidad_medida_id: unidadMedida.value,
+                    valor: valor.value,
+                };
+
+                // Llamar a la función con POST
+                postConAPI('http://localhost/backend-sec70-T3-24/semana08-Retroalimentacion/api/v1/test/', 'ipss2024T3s70', 'indicadores', postData, _btn);
+
+
+            } else {
+                _btn.innerText = 'Corrija los errores y vuelva a Crear Indicador';
+            }
+        }
+
+        function postConAPI(_endpoint, _token, _section, _postData = null, _btn) {
+
+            switch (_section) {
+                case 'indicadores':
+                    if (_postData) {
+                        // Realizar solicitud POST
+                        $.ajax({
+                            url: _endpoint,
+                            type: "POST",
+                            headers: {
+                                "Authorization": `Bearer ${_token}`,
+                                "Content-Type": "application/json" // Indicamos que enviamos JSON
+                            },
+                            data: JSON.stringify(_postData), // Convertimos los datos a JSON
+                            success: function (data) {
+                                // Manejo exitoso
+                                alert('Datos enviados correctamente');
+                                console.log('Respuesta del servidor:', data);
+                                _btn.innerText = 'Indicador agregado exitosamente';
+                            },
+                            error: function (xhr, status, error) {
+                                // Manejo de errores
+                                console.error(`Error: ${xhr.status} ${xhr.statusText}`);
+                                alert(`Error al enviar datos: ${xhr.status} ${xhr.statusText}`);
+                                _btn.innerText = 'Error al intentar agregar el indicador';
+                            }
+                        });
+                    } else {
+                        alert('No se enviaron datos para el POST.');
+                        _btn.innerText = 'No se enviaron datos para el POST.';
+                    }
+                    break;
+                default:
+                    alert('Sección no válida.');
+                    break;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
