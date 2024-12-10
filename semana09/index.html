@@ -7,6 +7,7 @@
     <title>ConIngenio.cl | Soluciones Tecnológicas con Ingeniería</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
     <style>
         .hero {
             background-image: url('assets/img/hero.png');
@@ -104,9 +105,8 @@
         <hr>
         <div class="px-4  text-center">
             <h1 id="indicadoresTitulo" class="display-5 my-5 fw-bold text-body-emphasis">{indicadoresTitulo}</h1>
-            <pre id="output" style="text-align: left;"></pre>
             <div id="indicadoresFilaTarjetas" class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Special title treatment</h5>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Special title treatment</h5>
@@ -126,17 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Special title treatment</h5>
@@ -161,7 +151,7 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select" id="fs1" aria-label="Floating label select example">
-                        <option selected>Seleccione una opcion</option>
+                        <option value="-1" selected>Seleccione una opción</option>
                         <option value="1">CLP</option>
                     </select>
                     <label for="fs1">Seleccione una Unidad de Medida</label>
@@ -201,7 +191,7 @@
                                     <div class="form-floating mb-3">
                                         <select class="form-select" id="floatingSelect1"
                                             aria-label="Floating label select example">
-                                            <option selected>Seleccione una opcion</option>
+                                            <option selected>Seleccione una opción</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
@@ -210,16 +200,16 @@
                                     </div>
                                     <div class="form-floating mb-3">
                                         <textarea class="form-control" placeholder="Leave a comment here"
-                                            id="floatingTextarea2" style="height: 100px"></textarea>
-                                        <label for="floatingTextarea2">Mensaje</label>
+                                            id="floatingTextarea1" style="height: 100px"></textarea>
+                                        <label for="floatingTextarea1">Mensaje</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheck1">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             Simular Correcto / incorrecto
                                         </label>
                                     </div>
-                                    <button type="button" onclick="validarFormularioContacto()"
+                                    <button type="button" onclick="validarFormularioContacto(this)"
                                         class="btn btn-primary w-100">Enviar Mensaje</button>
                                 </form>
                             </div>
@@ -297,15 +287,26 @@
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
                 </ul>
             </div>
+            <button id="success">Success</button>
         </footer>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
 
     <script>
+
+        // $(document).on('click', '#success', function (e) {
+        //     swal(
+        //         'Success',
+        //         'You clicked the <b style="color:green;">Success</b> button!',
+        //         'success'
+        //     )
+        // });
+
         //Evaluacion 2
         const valoresHero = {
             'titulo': 'Su socio para soluciones digitales',
@@ -399,6 +400,7 @@
                 }
             }
         ];
+
 
         //estas constantes, seran futuros endpoints
 
@@ -496,13 +498,11 @@
                 "activo": true
             }
         ];
-
-
-
         //DOM: Document Object Model
         seteoWeb();
 
-        getConAPI('http://localhost/backend-sec70-T3-24/semana08-Retroalimentacion/api/v1/test/', 'ipss', 'indicadores');
+        // getConAPI('endpoint', 'metodo','authorization', 'seccion');
+        getConAPI('http://localhost/backend-sec70-T3-24/semana08-Retroalimentacion/api/v1/test/', 'GET','ipss', 'indicadores');
 
         function seteoWeb() {
             //set menu principal
@@ -638,97 +638,149 @@
 
             //set formulario de contacto
             const floatingSelect1 = document.getElementById('floatingSelect1');
-            floatingSelect1.innerHTML = '<option selected>Seleccione una opcion</option>';
+            floatingSelect1.innerHTML = '<option value="-1" selected>Seleccione una opción</option>';
             listaServicios.forEach(s => {
                 if (s.activo == true) {
                     floatingSelect1.innerHTML += `<option value="${s.id}">${s.titulo.esp}</option>`;
                 }
             });
+
+            //seteo de indicadores
+            const indicadoresTitulo = document.getElementById('indicadoresTitulo');
+            indicadoresTitulo.innerText = 'Indicadores';
         }
 
+        function validarFormularioContacto(_btn) {
 
-        function getConAPI(_endpoint, _token, _section) {
-            const tituloSection = document.getElementById('indicadoresTitulo');
+            let contadorErrores = 0;
+
+            const formContactNombre = document.getElementById('floatingInput1');
+            if ((formContactNombre.value).length == 0) {
+                contadorErrores++;
+                formContactNombre.classList.add('is-invalid');
+            } else {
+                formContactNombre.classList.remove('is-invalid');
+                formContactNombre.classList.add('is-valid');
+            }
+
+            const formContactServicio = document.getElementById('floatingSelect1');
+            if (formContactServicio.value == -1) {
+                contadorErrores++;
+                formContactServicio.classList.add('is-invalid');
+            } else {
+                formContactServicio.classList.remove('is-invalid');
+                formContactServicio.classList.add('is-valid');
+            }
+
+            const formContactMensaje = document.getElementById('floatingTextarea1');
+            if ((formContactMensaje.value).length == 0) {
+                contadorErrores++;
+                formContactMensaje.classList.add('is-invalid');
+            } else {
+                formContactMensaje.classList.remove('is-invalid');
+                formContactMensaje.classList.add('is-valid');
+            }
+
+            const formContactTestCheck = document.getElementById('flexCheck1');
+
+            //formContactTestCheck.checked // para saber si es true o false.
+
+            if (contadorErrores == 0) {
+                //con el boton que llama a la funcion
+                _btn.classList.add('disabled');
+                _btn.innerText = 'Validando...';
+                if (formContactTestCheck.checked == true) {
+                    // alert('Mensaje enviado :)');
+                    swal(
+                        '¡Excelente!',
+                        'Su mensaje ha sido <b style="color:green;">enviado</b>!',
+                        'success'
+                    );
+
+                    _btn.classList.remove('disabled');
+                    _btn.innerText = 'Enviar Mensaje';
+                    //dejamos todo por defecto
+                    formContactNombre.value = '';
+                    formContactNombre.classList.remove('is-valid');
+                    formContactServicio.selectedIndex = 0;
+                    formContactServicio.classList.remove('is-valid');
+                    formContactMensaje.value = '';
+                    formContactMensaje.classList.remove('is-valid');
+                    formContactTestCheck.checked = false;
+                } else {
+                    // alert('El mensaje no pudo ser enviado :(');
+                    _btn.classList.remove('disabled');
+                    _btn.innerText = 'Volver a enviar el mensaje';
+                    swal(
+                        '¡Error!',
+                        'Su mensaje <b style="color: red">no</b>ha sido enviado!<br><br><b>Puede volver a intentarlo</b>',
+                        'error'
+                    );
+                }
+            }
+        }
+
+        function getConAPI(_endpoint, _metodo, _authorization, _section) {
             switch (_section) {
                 case 'indicadores':
-                    indicadoresTitulo.innerText = 'Indicadores';
                     $.ajax({
                         url: _endpoint,
-                        type: "GET", // Cambia a POST, PUT o DELETE si es necesario
+                        type: _metodo, //metodo GET, POST, PUT, PATCH, DELETE
                         headers: {
-                            "Authorization": `Bearer ${_token}`
+                            'Authorization': `Bearer ${_authorization}`
                         },
-                        success: function (data) {
-                            // Mostrar datos en el elemento <pre>
-                            // $("#output").text(JSON.stringify(data, null, 2));
-                            const indicadoresFilaTarjetas = document.getElementById('indicadoresFilaTarjetas');
-                            let cantidadColumnas = 12;
-                            if (data.data.length <= 6) {
-                                cantidadColumnas = 12 / data.data.length;
-                            }
-                            // console.log(data);
-                            indicadoresFilaTarjetas.innerHTML = '';
-                            data.data.forEach(d => {
-                                if (d.activo) {
-
-                                    indicadoresFilaTarjetas.innerHTML += `
-                                    <div class="col-lg-${cantidadColumnas} col-md-6">
+                        success: function(data){
+                            const filasHTML = document.getElementById('indicadoresFilaTarjetas');
+                            filasHTML.innerHTML = '';
+                            data.data.forEach(i => {
+                                if(i.activo){
+                                    filasHTML.innerHTML += `
+                                    <div class="col-lg-4 col-md-6">
                                         <div class="card mb-3">
                                             <div class="card-body">
-                                                <h5 class="card-title">${d.nombre}</h5>
-                                                <p class="card-text">${d.codigo} $${d.valor}</p>
-                                                <a href="#" class="btn btn-primary">Copiar</a>
+                                                <h5 class="card-title">${i.nombre}</h5>
+                                                <p class="card-text">${i.codigo} $${i.valor}</p>
+                                                <a href="#" class="btn btn-primary">más info</a>
                                             </div>
                                         </div>
                                     </div>
                                     `;
                                 }
                             });
+                            // console.log('data obtenida');
+                            // console.log(data.data);
                         },
-                        error: function (xhr, status, error) {
-                            // Manejo de errores
-                            $("#output").text(`Error: ${xhr.status} ${xhr.statusText}`);
+                        error: function(xhr, status, error){
+                            console.log(`Error: ${xhr.status} - ${xhr.statusText}` );
                         }
+
                     });
                     break;
                 default:
                     break;
             }
         }
-
-        function validarFormularioContacto() {
-            const floatingInput1 = document.getElementById('floatingInput1');
-            if ((floatingInput1.value).length == 0) {
-                // alert('Error!!!!! le falta el nombre');
-                floatingInput1.classList.add('is-invalid');
-            } else {
-                floatingInput1.classList.remove('is-invalid');
-            }
-            // alert('validando datos: ');
-        }
-
-        function validarFormularioIndicador(_btn) {
+        
+        function validarFormularioIndicador(_btn){
             let errores = 0;
-
+            // console.log('validando el formulario de nuevo indicador');
             const codigo = document.getElementById('fi1');
             const nombre = document.getElementById('fi2');
             const unidadMedida = document.getElementById('fs1');
             const valor = document.getElementById('fi3');
 
             if (codigo.value.length == 0) {
-                codigo.classList.add('is-invalid');
                 errores++;
+                codigo.classList.add('is-invalid');
             } else {
                 codigo.classList.remove('is-invalid');
                 codigo.classList.add('is-valid');
-                // console.log(codigo.value);
             }
-
+            
             if (nombre.value.length == 0) {
-                nombre.classList.add('is-invalid');
                 errores++;
+                nombre.classList.add('is-invalid');
             } else {
-                // console.log(nombre.value);
                 nombre.classList.remove('is-invalid');
                 nombre.classList.add('is-valid');
             }
@@ -741,74 +793,58 @@
                 valor.classList.add('is-valid');
             }
 
-            if (unidadMedida.value == 'Seleccione una opcion') {
+            if (unidadMedida.value == -1) {
                 errores++;
                 unidadMedida.classList.add('is-invalid');
             } else {
                 unidadMedida.classList.remove('is-invalid');
                 unidadMedida.classList.add('is-valid');
-                // console.log(unidadMedida.value);
             }
 
-            if (errores == 0) {
+            if(errores == 0){
                 _btn.classList.add('disabled');
-                _btn.innerText = '... ingresando datos';
+                _btn.innerText = 'Ingresando valores...';
 
-                // Datos para el POST
+                //preparar los datos para el POST
                 const postData = {
                     codigo: codigo.value,
                     nombre: nombre.value,
                     unidad_medida_id: unidadMedida.value,
-                    valor: valor.value,
+                    valor: valor.value
                 };
 
-                // Llamar a la función con POST
-                postConAPI('http://localhost/backend-sec70-T3-24/semana08-Retroalimentacion/api/v1/test/', 'ipss2024T3s70', 'indicadores', postData, _btn);
-
-
-            } else {
-                _btn.innerText = 'Corrija los errores y vuelva a Crear Indicador';
+                //llamamos a la funcion que le pega al endpoint
+                // postConAPI('endpoint', 'metodo', 'authorization', data, 'seccion');
+                postConAPI('http://localhost/backend-sec70-T3-24/semana08-Retroalimentacion/api/v1/test/', 'POST', 'ipss2024T3s70', postData,'indicadores');
             }
+
         }
 
-        function postConAPI(_endpoint, _token, _section, _postData = null, _btn) {
-
+        function postConAPI(_endpoint, _metodo, _authorization, _postData = null,_section){
+            // console.log('post con api');
             switch (_section) {
                 case 'indicadores':
-                    if (_postData) {
-                        // Realizar solicitud POST
-                        $.ajax({
-                            url: _endpoint,
-                            type: "POST",
-                            headers: {
-                                "Authorization": `Bearer ${_token}`,
-                                "Content-Type": "application/json" // Indicamos que enviamos JSON
-                            },
-                            data: JSON.stringify(_postData), // Convertimos los datos a JSON
-                            success: function (data) {
-                                // Manejo exitoso
-                                alert('Datos enviados correctamente');
-                                console.log('Respuesta del servidor:', data);
-                                _btn.innerText = 'Indicador agregado exitosamente';
-                            },
-                            error: function (xhr, status, error) {
-                                // Manejo de errores
-                                console.error(`Error: ${xhr.status} ${xhr.statusText}`);
-                                alert(`Error al enviar datos: ${xhr.status} ${xhr.statusText}`);
-                                _btn.innerText = 'Error al intentar agregar el indicador';
-                            }
-                        });
-                    } else {
-                        alert('No se enviaron datos para el POST.');
-                        _btn.innerText = 'No se enviaron datos para el POST.';
-                    }
+                    $.ajax({
+                        url: _endpoint,
+                        type: _metodo,
+                        headers: {
+                            'Authorization': `Bearer ${_authorization}`,
+                            'Content-type': 'application/json'
+                        },
+                        data: JSON.stringify(_postData),
+                        success: function(data){
+                            console.log('Respuesta del servidor: ' + data);
+                        },
+                        error: function(xhr, status, error){
+                            console.log(`Error al enviar datos: ${xhr.status} - ${xhr.statusText}`);
+                        }
+                    });
                     break;
+            
                 default:
-                    alert('Sección no válida.');
                     break;
             }
         }
-
 
     </script>
 </body>
